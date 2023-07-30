@@ -1,0 +1,311 @@
+.hero {
+    padding-top: 128px;
+    padding-bottom: 85px;
+    z-index: 1;
+    background-image: url(/assets/images/hero-bg-top.svg), url(/assets/images/hero-bg.svg),
+        url(/assets/images/hero-bg.svg);
+    background-repeat: no-repeat;
+    background-position: top -198px right 50%, bottom -611px right -294px, bottom -468px left -146px;
+    .heading-content {
+        text-align: center;
+        gap: 24px;
+        .desc-text {
+            color: $gray;
+            font-size: $span-lg;
+            font-family: $font-almarena_regular;
+        }
+
+        .heading-text {
+            font-size: $h1-lg;
+            color: $black;
+            font-family: $font-almarena_display_bold;
+            max-width: 1015px;
+            margin: 0 auto;
+
+            .hero-circle {
+                width: 133px;
+                margin-bottom: -30px;
+            }
+
+            span {
+                color: $white;
+                position: relative;
+
+                img {
+                    position: absolute;
+                    max-width: 100%;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+
+    .content {
+        .profile {
+            position: absolute;
+            bottom: 80px;
+            left: 80px;
+            gap: 24px;
+
+            img {
+                width: 80px;
+            }
+
+            .desc-text {
+                font-size: $p-lg;
+                font-family: $font-almarena_regular;
+                color: $gray;
+                max-width: 388px;
+                line-height: 140%;
+            }
+        }
+
+        .wrap-city {
+            position: absolute;
+            top: 56px;
+            right: 80px;
+
+            .address,
+            .city {
+                background-color: $electric-blue;
+                padding: 10px 12px;
+                border-radius: 40px;
+                margin: -1px 0;
+                font-size: $p-lg;
+                color: $yellow-green;
+            }
+        }
+
+        .scrollDown {
+            margin-top: 90px;
+            gap: 12px;
+            cursor: pointer;
+            color: $gray;
+
+            .desc-text {
+                font-size: $p-lg;
+                color: $gray;
+            }
+            .material-symbols-outlined {
+                padding: 6px;
+                background-color: $electric-blue;
+                font-size: 20px;
+                font-weight: 400;
+                border-radius: 50%;
+                color: $white;
+            }
+        }
+
+        .decor-1 {
+            position: absolute;
+            top: 18px;
+            left: 118px;
+            z-index: -2;
+        }
+
+        .decor-2 {
+            position: absolute;
+            top: 28px;
+            left: 105.5px;
+            max-width: 319.4px;
+            z-index: -1;
+        }
+
+        .decor-3 {
+            position: absolute;
+            bottom: 79px;
+            right: 36px;
+            max-width: 300.94px;
+            z-index: -1;
+        }
+
+        .decor-4 {
+            position: absolute;
+            bottom: 112px;
+            right: 97.5px;
+            z-index: -2;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero {
+        .heading-content {
+            .heading-text {
+                font-size: 102px;
+            }
+        }
+
+        .content {
+            .profile {
+                bottom: 40px;
+                left: 51.5px;
+                gap: 16px;
+
+                img {
+                    width: 56px;
+                }
+
+                .desc-text {
+                    max-width: 280px;
+                }
+            }
+
+            .wrap-city {
+                right: 51.5px;
+            }
+
+            // .scrollDown {
+            // }
+
+            // .decor-1 {
+            //     position: absolute;
+            //     top: 18px;
+            //     left: 118px;
+            //     z-index: -2;
+            // }
+
+            .decor-2 {
+                position: absolute;
+                top: 28px;
+                left: 51.5px;
+                max-width: 214.4px;
+                z-index: -1;
+            }
+
+            .decor-3 {
+                position: absolute;
+                bottom: 39px;
+                right: 36px;
+                max-width: 212.4px;
+                z-index: -1;
+            }
+
+            .decor-4 {
+                position: absolute;
+                bottom: 112px;
+                right: 97.5px;
+                z-index: -2;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        background-image: unset;
+        .heading-content {
+            .heading-text {
+                font-size: $h1-md !important;
+
+                .hero-circle {
+                    width: 82px;
+                    margin-bottom: -16px;
+                }
+
+                span {
+                    img {
+                        max-width: 92%;
+                    }
+                }
+            }
+
+            .desc-text {
+                font-size: $p-lg;
+            }
+        }
+        .content {
+            .profile {
+                margin-top: 30px;
+                text-align: center;
+                align-items: center;
+                position: unset;
+                bottom: unset;
+                left: unset;
+
+                gap: 10px;
+
+                .desc-text {
+                    max-width: 60%;
+                }
+            }
+
+            .scrollDown {
+                margin-top: 40px;
+            }
+
+            .wrap-city {
+                span {
+                    font-size: $p-md !important;
+                }
+            }
+
+            .decor-1,
+            .decor-2,
+            .decor-3,
+            .decor-4 {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        padding-block: 80px;
+        .heading-content {
+            .heading-text {
+                font-size: 42px !important;
+                max-width: unset;
+                width: 100%;
+
+                .hero-circle {
+                    width: 48px;
+                    margin-bottom: -8px;
+                }
+
+                span {
+                    img {
+                        max-width: 100%;
+                    }
+                }
+
+                .hero-circle {
+                    width: 54px;
+                }
+            }
+            .desc-text {
+                font-size: 16px;
+            }
+        }
+
+        .content {
+            .wrap-city {
+                display: none;
+            }
+
+            .profile {
+                margin-top: 20px;
+
+                img {
+                    width: 48px;
+                }
+
+                .desc-text {
+                    max-width: unset;
+                    font-size: $p-md;
+                }
+            }
+
+            .scrollDown {
+                margin-top: 20px;
+
+                .material-symbols-outlined {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

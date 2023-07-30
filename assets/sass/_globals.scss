@@ -1,0 +1,156 @@
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: $p-md;
+    font-family: $font-almarena_regular;
+    color: $black;
+}
+
+// Flexbox
+.flex {
+    display: flex;
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+
+    &-jc-sa {
+        justify-content: space-around;
+    }
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-jc-fs {
+        justify-content: flex-start;
+    }
+
+    &-jc-fe {
+        justify-content: flex-end;
+    }
+
+    &-ai-fs {
+        align-items: flex-start;
+    }
+
+    &-ai-fe {
+        align-items: flex-end;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
+
+    &-fd-r {
+        flex-direction: row;
+    }
+
+    &-fd-rr {
+        flex-direction: row-reverse;
+    }
+
+    &-fd-c {
+        flex-direction: column;
+    }
+
+    &-fd-cr {
+        flex-direction: column-reverse;
+    }
+}
+
+.container {
+    max-width: 1440px;
+    padding: 0 24px;
+    margin: 0 auto;
+
+    &-child {
+        padding: 0 56px;
+    }
+}
+
+.with-border {
+    border: 1.5px solid #e7e7e7;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.border-top-none {
+    border-top: none;
+}
+
+.border-bottom-none {
+    border-bottom: none;
+}
+
+.btn {
+    color: $white;
+    font-size: 20px;
+    padding: 16px 24px;
+
+    &-outline {
+        border-radius: 64px;
+        outline: 1px solid rgba(255, 255, 255, 0.3);
+
+        &:hover {
+            background-color: $yellow-green;
+            color: $black;
+            border: none;
+        }
+    }
+
+    &-outline-arrow {
+        color: $black;
+        font-family: $font-almarena_display_bold;
+        font-size: 16px;
+        border-radius: 120px;
+        outline: 1.5px solid #b9e800;
+
+        span {
+            margin-left: 8px;
+            vertical-align: middle;
+            color: $electric-blue;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        font-size: 16px !important;
+    }
+
+    @media (max-width: 768px) {
+        padding: 14px 20px;
+    }
+}
+
+.d-dekstop-none {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 1440px;
+        padding: 0 20px;
+        margin: 0 auto;
+
+        &-child {
+            padding: 0 26px;
+        }
+    }
+}

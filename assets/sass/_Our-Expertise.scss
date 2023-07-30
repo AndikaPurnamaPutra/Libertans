@@ -1,0 +1,403 @@
+.Our-Expertise {
+    border-radius: 56px;
+    background-color: #111;
+    padding-top: 64px;
+    padding-bottom: 80px;
+    margin-bottom: 80px;
+    .heading-content {
+        padding-bottom: 24px;
+        border-bottom: 1.5px solid #383838;
+        .desc-text {
+            font-family: $font-almarena_regular;
+            font-size: $p-lg;
+            color: $mediumDark-gray;
+            max-width: 323px;
+            text-align: start;
+        }
+
+        .heading-text {
+            font-family: $font-almarena_display_bold;
+            font-size: $h3-lg;
+            color: $white;
+        }
+    }
+
+    .content-1 {
+        padding-top: 64px;
+        padding-bottom: 80px;
+        gap: 12px;
+        border-bottom: 1.5px solid #383838;
+        .card {
+            position: relative;
+            padding: 16px;
+            padding-top: 32px;
+            border-radius: 32px;
+            width: 419px;
+            background: rgba(255, 255, 255, 0.12);
+            transition: all 200ms ease;
+
+            .heading-content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: 20px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+                transition: all 200ms ease;
+
+                .heading-text {
+                    max-width: 228px;
+                    font-size: $h2-md;
+                    font-family: $font-almarena_display_bold;
+                    color: $yellow-green;
+                }
+
+                .btn-circle-arrow {
+                    display: flex;
+                    text-decoration: none;
+                    padding: 20px;
+                    border-radius: 50%;
+                    color: $white;
+                    background-color: rgba(239, 239, 239, 0.12);
+                    opacity: 1;
+
+                    span {
+                        font-size: 40px;
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            .desc-text {
+                font-size: $p-lg;
+                color: $gray;
+                padding-block: 20px;
+                font-family: $font-almarena_regular;
+                max-width: 355px;
+                transition: all 200ms ease;
+            }
+
+            .img-card {
+                width: 100%;
+                border-radius: 32px;
+            }
+
+            .btn-circle-arrow-hover {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: flex;
+                text-decoration: none;
+                padding: 32px;
+                border-radius: 50%;
+                color: $electric-blue;
+                background-color: $yellow-green;
+                border: 6px solid #111;
+                opacity: 0;
+                transition: all 100ms ease;
+
+                span {
+                    font-size: 48px;
+                    font-weight: 700;
+                }
+            }
+
+            &:hover {
+                background: $electric-blue;
+                border-bottom-left-radius: 224px;
+
+                .img-card {
+                    border-bottom-left-radius: 300px;
+                }
+
+                .btn-circle-arrow {
+                    opacity: 0;
+                }
+
+                .btn-circle-arrow-hover {
+                    opacity: 1;
+                }
+
+                .heading-text,
+                .desc-text {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .content-2 {
+        background-image: url("/assets/images/our-expertise-decoration-1.svg");
+        background-repeat: no-repeat;
+        background-size: 416px;
+        background-position: 0 50%;
+        padding-top: 96px;
+
+        .circle {
+            max-width: 240px;
+            animation: rotation 10s infinite linear;
+
+            @keyframes rotation {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(359deg);
+                }
+            }
+        }
+
+        .heading-text {
+            font-family: $font-almarena_display_bold;
+            color: $yellow-green;
+            font-size: $h2-lg;
+            text-transform: uppercase;
+            max-width: 913px;
+            z-index: 1;
+        }
+
+        .decor-1 {
+            position: absolute;
+            top: 50%;
+            left: 60%;
+            max-width: 550px;
+            transform: translate(-50%, -50%);
+        }
+
+        .wrapper {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            text-align: end;
+            gap: 24px;
+
+            .project-completed {
+                .heading-text {
+                    max-width: unset;
+                    color: $white;
+                    font-size: 64px;
+
+                    sup {
+                        color: $electric-blue;
+                    }
+                }
+                .desc-text {
+                    color: $yellow-green;
+                    font-size: 20px;
+                }
+            }
+
+            .desc-text {
+                color: rgba(255, 255, 255, 0.64);
+                font-size: $p-lg;
+                max-width: 514px;
+                // max-width: 267px;
+                line-height: 140%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .Our-Expertise {
+        .content-1 {
+            flex-wrap: wrap;
+        }
+        .content-2 {
+            background-position: 0 80%;
+            background-size: 350px;
+            .heading-text {
+                font-size: 62px;
+            }
+
+            .circle {
+                max-width: 164px;
+            }
+
+            .decor-1 {
+                top: 56%;
+                max-width: 360px;
+            }
+
+            .wrapper {
+                .desc-text {
+                    max-width: 359px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .Our-Expertise {
+        .content-1 {
+            .card {
+                .heading-content {
+                    .heading-text {
+                        font-size: 42px;
+                    }
+                }
+            }
+        }
+
+        .content-2 {
+            .heading-text {
+                max-width: 613px;
+            }
+
+            .decor-1 {
+                top: 50%;
+                max-width: 340px;
+            }
+
+            .wrapper {
+                max-width: 300px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .Our-Expertise {
+        .heading-content {
+            flex-direction: column;
+            gap: 14px;
+
+            .heading-text {
+                max-width: unset;
+            }
+        }
+
+        .content-1 {
+            justify-content: center;
+            gap: 24px;
+            .card {
+                .heading-content {
+                    flex-direction: row;
+
+                    .btn-circle-arrow {
+                        padding: 18px;
+                        span {
+                            font-size: 32px;
+                        }
+                    }
+                }
+
+                .btn-circle-arrow-hover {
+                    padding: 28px;
+                }
+            }
+        }
+
+        .content-2 {
+            flex-direction: column-reverse;
+            background-image: url(/assets/images/our-expertise-decoration-1.svg);
+            background-repeat: no-repeat;
+            background-size: 237px;
+            background-position: 50% 95%;
+            padding-top: 96px;
+            gap: 24px;
+            .heading-text {
+                max-width: unset;
+                text-align: center;
+                font-size: 48px;
+            }
+
+            .wrapper {
+                position: relative;
+                max-width: unset;
+                text-align: center;
+                align-items: center;
+                gap: 18px;
+                .desc-text {
+                    max-width: unset;
+                    width: 80%;
+                }
+            }
+
+            .circle {
+                display: none;
+            }
+
+            .decor-1 {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .Our-Expertise {
+        border-radius: 42px;
+        padding-block: 80px;
+        .heading-content {
+            .heading-text {
+                font-size: 32px;
+            }
+
+            .desc-text {
+                font-size: 16px;
+            }
+        }
+
+        .content-1 {
+            padding-block: 40px;
+            .card {
+                &:hover {
+                    border-bottom-left-radius: 146px;
+                }
+
+                .heading-content {
+                    flex-direction: row;
+
+                    .heading-text {
+                        font-size: 32px;
+                    }
+
+                    .btn-circle-arrow {
+                        padding: 16px;
+                        span {
+                            font-size: 24px;
+                        }
+                    }
+                }
+
+                .desc-text {
+                    font-size: 16px;
+                    max-width: unset;
+                }
+
+                .btn-circle-arrow-hover {
+                    padding: 24px;
+
+                    span {
+                        font-size: 32px;
+                    }
+                }
+            }
+        }
+
+        .content-2 {
+            padding-top: 40px;
+
+            background-image: unset;
+            .heading-text {
+                font-size: 24px;
+            }
+            .wrapper {
+                .project-completed {
+                    .heading-text {
+                        font-size: 58px;
+                    }
+
+                    .desc-text {
+                        font-size: 18px;
+                    }
+                }
+
+                .desc-text {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

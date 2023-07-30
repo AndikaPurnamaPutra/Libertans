@@ -1,0 +1,33 @@
+@font-face {
+    font-family: "almarena_display_boldregular";
+    src: url("/assets/fonts/almarena_display_bold-webfont.woff2") format("woff2"),
+        url("/assets/fonts/almarena_display_bold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "almarena_regularregular";
+    src: url("/assets/fonts/almarena_regular-webfont.woff2") format("woff2"),
+        url("/assets/fonts/almarena_regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+$yellow-green: #b9e800;
+$black: #111111;
+$white: #ffffff;
+$gray: #939393;
+$mediumDark-gray: #5f5f5f;
+$electric-blue: #601feb;
+$h1-lg: 120px;
+$h1-md: 72px;
+$h2-lg: 80px;
+$h2-md: 48px;
+$h3-lg: 40px;
+$h3-md: 32px;
+$span-lg: 24px;
+$p-lg: 18px;
+$p-md: 16px;
+$font-almarena_regular: "almarena_regularregular";
+$font-almarena_display_bold: "almarena_display_boldregular";

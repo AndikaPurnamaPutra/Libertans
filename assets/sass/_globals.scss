@@ -124,6 +124,12 @@ body {
             vertical-align: middle;
             color: $electric-blue;
         }
+
+        &:hover {
+            background-color: $yellow-green;
+            color: $black;
+            border: none;
+        }
     }
 
     @media (max-width: 1200px) {

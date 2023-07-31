@@ -120,6 +120,11 @@ body {
   vertical-align: middle;
   color: #601feb;
 }
+.btn-outline-arrow:hover {
+  background-color: #b9e800;
+  color: #111111;
+  border: none;
+}
 @media (max-width: 1200px) {
   .btn {
     font-size: 16px !important;
@@ -210,6 +215,18 @@ a {
   object-fit: cover;
   opacity: 0;
   transition: all 300ms ease;
+  animation: rotation 10s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.recent-work .content .card:hover {
+  cursor: pointer;
 }
 .recent-work .content .card:hover .img-card {
   filter: saturate(1);
@@ -351,7 +368,7 @@ a {
   border-radius: 32px;
   width: 419px;
   background: rgba(255, 255, 255, 0.12);
-  transition: all 200ms ease;
+  transition: all 0.5s ease;
 }
 .Our-Expertise .content-1 .card .heading-content {
   display: flex;
@@ -386,7 +403,7 @@ a {
   padding-block: 20px;
   font-family: "almarena_regularregular";
   max-width: 355px;
-  transition: all 200ms ease;
+  transition: all 0.5s ease;
 }
 .Our-Expertise .content-1 .card .img-card {
   width: 100%;
@@ -404,13 +421,14 @@ a {
   background-color: #b9e800;
   border: 6px solid #111;
   opacity: 0;
-  transition: all 100ms ease;
+  transition: all 0.6s ease;
 }
 .Our-Expertise .content-1 .card .btn-circle-arrow-hover span {
   font-size: 48px;
   font-weight: 700;
 }
 .Our-Expertise .content-1 .card:hover {
+  cursor: pointer;
   background: #601feb;
   border-bottom-left-radius: 224px;
 }
@@ -437,6 +455,7 @@ a {
 .Our-Expertise .content-2 .circle {
   max-width: 240px;
   animation: rotation 10s infinite linear;
+  cursor: pointer;
 }
 @keyframes rotation {
   from {
@@ -925,6 +944,7 @@ footer .heading-content .decor-footer-btn {
   right: 64px;
   max-width: 180px;
   animation: rotation 10s infinite linear;
+  cursor: pointer;
 }
 @keyframes rotation {
   from {
@@ -1046,6 +1066,9 @@ footer .content .wrap .wrap-privacy a:not(:last-child) {
 .navbar-inner .navbar-collapse .navbar-menu .nav-link:not(:last-child) {
   margin-right: 40px;
 }
+.navbar-inner .navbar-collapse .navbar-menu .nav-link:hover {
+  color: #601feb;
+}
 .navbar-inner .navbar-collapse.active {
   height: 300px;
 }
@@ -1083,7 +1106,15 @@ footer .content .wrap .wrap-privacy a:not(:last-child) {
   color: #111111;
   margin-right: 40px;
 }
+.navbar-inner .wrap-btn .faq:hover {
+  color: #601feb;
+}
 
+@media (min-width: 992px) {
+  .navbar-inner .navbar-collapse.active {
+    height: unset;
+  }
+}
 @media (max-width: 992px) {
   .d-mobile-none {
     display: none;
@@ -1096,6 +1127,10 @@ footer .content .wrap .wrap-privacy a:not(:last-child) {
     right: 0;
     width: 100%;
     transition: all 300ms ease;
+    overflow: hidden;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    border: 1.5px solid #e7e7e7;
   }
   .navbar-inner .navbar-collapse .navbar-menu {
     display: flex;
@@ -1104,7 +1139,7 @@ footer .content .wrap .wrap-privacy a:not(:last-child) {
     width: fit-content;
     margin: 40px auto;
     text-align: center;
-    transition: all 300ms ease;
+    transition: all 500ms ease;
     opacity: 0;
   }
   .navbar-inner .navbar-collapse .navbar-menu .nav-link {
@@ -1131,6 +1166,9 @@ footer .content .wrap .wrap-privacy a:not(:last-child) {
   }
 }
 @media (max-width: 576px) {
+  .navbar-inner .navbar-collapse {
+    top: 56px;
+  }
   .navbar-inner .navbar-brand {
     font-size: 20px;
   }

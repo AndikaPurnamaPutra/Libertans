@@ -57,6 +57,7 @@ footer {
             right: 64px;
             max-width: 180px;
             animation: rotation 10s infinite linear;
+            cursor: pointer;
 
             @keyframes rotation {
                 from {

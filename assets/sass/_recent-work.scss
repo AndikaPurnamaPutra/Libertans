@@ -66,9 +66,20 @@
                 object-fit: cover;
                 opacity: 0;
                 transition: all 300ms ease;
+                animation: rotation 10s infinite linear;
+
+                @keyframes rotation {
+                    from {
+                        transform: rotate(0deg);
+                    }
+                    to {
+                        transform: rotate(359deg);
+                    }
+                }
             }
 
             &:hover {
+                cursor: pointer;
                 .img-card {
                     filter: saturate(1);
                 }
